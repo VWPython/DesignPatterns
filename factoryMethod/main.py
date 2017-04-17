@@ -1,13 +1,25 @@
-from emissorCreator import EmissorCreator
+from car.factories.fiat import Fiat
+from car.factories.wolkswagen import Wolkswagen
+from car.factories.ford import Ford
+from car.factories.chevrolet import Chevrolet
 
-creator = EmissorCreator()
+def main():
 
+    factory = Fiat()
+    car = factory.build_car()
+    car.show_information();
 
-emissor = creator.create(EmissorCreator.JMS)
-emissor.envia("Mensagem em JMS!")
+    factory = Wolkswagen()
+    car = factory.build_car()
+    car.show_information();
 
-emissor = creator.create(EmissorCreator.SMS)
-emissor.envia("Mensagem em SMS!")
+    factory = Ford()
+    car = factory.build_car()
+    car.show_information();
 
-emissor = creator.create(EmissorCreator.EMAIL)
-emissor.envia("Mensagem em Email!")
+    factory = Chevrolet()
+    car = factory.build_car()
+    car.show_information();
+
+if __name__ == "__main__":
+    main()
