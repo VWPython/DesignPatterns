@@ -1,25 +1,25 @@
-from car.factories.fiat import Fiat
-from car.factories.wolkswagen import Wolkswagen
-from car.factories.ford import Ford
-from car.factories.chevrolet import Chevrolet
+from carro.fabricas.fiat import Fiat
+from carro.fabricas.volkswagen import Volkswagen
+from carro.fabricas.ford import Ford
+from carro.fabricas.chevrolet import Chevrolet
 
 def main():
 
-    factory = Fiat()
-    car = factory.build_car()
-    car.show_information();
+    fabrica = Fiat()
+    carro = fabrica.constroi_carro()
+    carro.mostra_informacao();
 
-    factory = Wolkswagen()
-    car = factory.build_car()
-    car.show_information();
+    fabrica = Volkswagen()
+    carro = fabrica.constroi_carro()
+    carro.mostra_informacao();
 
-    factory = Ford()
-    car = factory.build_car()
-    car.show_information();
+    fabrica = Ford()
+    carro = fabrica.constroi_carro()
+    carro.mostra_informacao();
 
-    factory = Chevrolet()
-    car = factory.build_car()
-    car.show_information();
+    fabrica = Chevrolet()
+    carro = fabrica.constroi_carro()
+    carro.mostra_informacao();
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,9 @@
 from abc import ABCMeta, abstractmethod
 
-class CarFactory(object):
+class Carro(object):
 
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def build_car(self):
+    def mostra_informacao(self):
         pass

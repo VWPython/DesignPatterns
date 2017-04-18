@@ -1,20 +1,20 @@
-from car.factories.fiat import Fiat
-from car.factories.ford import Ford
+from carro.fabricas.fiat import Fiat
+from carro.fabricas.ford import Ford
 
 
 def main():
 
-    factory = Fiat()
-    sedan = factory.build_sedan_car()
-    popular = factory.build_popular_car()
-    sedan.show_information()
-    popular.show_information()
+    fabrica = Fiat()
+    sedan = fabrica.constroi_carro_sedan()
+    popular = fabrica.constroi_carro_popular()
+    sedan.mostra_informacao()
+    popular.mostra_informacao()
 
-    factory = Ford()
-    sedan = factory.build_sedan_car()
-    popular = factory.build_popular_car()
-    sedan.show_information()
-    popular.show_information()
+    fabrica = Ford()
+    sedan = fabrica.constroi_carro_sedan()
+    popular = fabrica.constroi_carro_popular()
+    sedan.mostra_informacao()
+    popular.mostra_informacao()
 
 if __name__ == "__main__":
     main()
