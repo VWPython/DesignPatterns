@@ -1,6 +1,8 @@
 ## Padrões de projeto - GoF
 ***
 
+* ISSUES: state, interpreter, templateMethod
+
 * Código de todos os padrões de projetos em python
 
 * Dificilmente, uma empresa consegue sobreviver sem auxílio de ferramentas computacionais.
