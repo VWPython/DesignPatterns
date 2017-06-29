@@ -1,27 +1,26 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 from carro.produto import Carro
 
-class FabricaDeCarros(object):
 
-    __metaclass__ = ABCMeta
+class FabricaDeCarros(ABC):
 
     def __init__(self):
         self.carro = Carro()
 
     @abstractmethod
-    def define_preco(self):
+    def define_preco(self, preco):
         pass
 
     @abstractmethod
-    def define_motor(self):
+    def define_motor(self, motor):
         pass
 
     @abstractmethod
-    def define_ano_de_fabricacao(self):
+    def define_ano_de_fabricacao(self, ano_de_fabricacao):
         pass
 
     @abstractmethod
-    def define_modelo(self):
+    def define_modelo(self, modelo):
         pass
 
     @abstractmethod
