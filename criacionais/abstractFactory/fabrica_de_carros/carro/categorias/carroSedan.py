@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
 
-class FabricaDeCarros(ABC):
+class CarroSedan(ABC):
 
     @abstractmethod
-    def constroi_carro(self, modelo):
+    def mostra_informacao(self):
         pass
