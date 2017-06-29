@@ -1,7 +1,17 @@
 from carro.fabricas.fabricaDeCarros import FabricaDeCarros
-from carro.modelos.palio import Palio
+from carro.modelos.fiat import Palio, Uno, Punto
+
 
 class Fiat(FabricaDeCarros):
 
-    def constroi_carro(self):
-        return Palio()
+    PALIO = 0
+    UNO = 1
+    PUNTO = 2
+
+    def constroi_carro(self, modelo):
+        if modelo == self.PALIO:
+            return Palio()
+        elif modelo == self.UNO:
+            return Uno()
+        elif modelo == self.PUNTO:
+            return Punto()

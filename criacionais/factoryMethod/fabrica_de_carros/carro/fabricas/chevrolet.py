@@ -1,7 +1,17 @@
 from carro.fabricas.fabricaDeCarros import FabricaDeCarros
-from carro.modelos.celta import Celta
+from carro.modelos.chevrolet import Celta, Prisma, Onix
+
 
 class Chevrolet(FabricaDeCarros):
 
-    def constroi_carro(self):
-        return Celta()
+    ONIX = 0
+    CELTA = 1
+    PRISMA = 2
+
+    def constroi_carro(self, modelo):
+        if modelo == self.ONIX:
+            return Onix()
+        elif modelo == self.CELTA:
+            return Celta()
+        elif modelo == self.PRISMA:
+            return Prisma()

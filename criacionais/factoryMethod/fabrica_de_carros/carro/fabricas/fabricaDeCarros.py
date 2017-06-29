@@ -1,8 +1,7 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
-class FabricaDeCarros(object):
 
-    __metaclass__ = ABCMeta
+class FabricaDeCarros(ABC):
 
     @abstractmethod
     def constroi_carro(self):
