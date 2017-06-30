@@ -1,4 +1,5 @@
-from carro.prototipos.palioPrototipo import PalioPrototipo
+from carro.prototipos.palio_prototipo import PalioPrototipo
+
 
 def main():
     prototipo_do_palio = PalioPrototipo()

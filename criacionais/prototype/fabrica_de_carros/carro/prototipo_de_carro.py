@@ -1,10 +1,10 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
-class PrototipoDeCarro(object):
 
-    __metaclass__ = ABCMeta
+class PrototipoDeCarro(ABC):
 
-    _valor_da_compra = 0.0
+    def __init__(self):
+        self.__valor_da_compra = 0.0
 
     @abstractmethod
     def exibe_informacao(self):
@@ -16,8 +16,8 @@ class PrototipoDeCarro(object):
 
     @property
     def valor_da_compra(self):
-        return self._valor_da_compra
+        return self.__valor_da_compra
 
     @valor_da_compra.setter
     def valor_da_compra(self, valor_da_compra):
-        self._valor_da_compra = valor_da_compra
+        self.__valor_da_compra = valor_da_compra

@@ -1,4 +1,5 @@
-from carro.prototipoDeCarro import PrototipoDeCarro
+from carro.prototipo_de_carro import PrototipoDeCarro
+
 
 class PalioPrototipo(PrototipoDeCarro):
 

@@ -1,4 +1,5 @@
-from carro.fabricaDeCarros import FabricaDeCarros
+from carro.fabrica_de_carros import FabricaDeCarros
+
 
 def main():
     fabrica = FabricaDeCarros.pega_instancia()
@@ -7,6 +8,7 @@ def main():
     fabrica.cria_carro_volks()
     fabrica.gera_relatorio()
 
+    print("Segunda instancia")
     fabrica = FabricaDeCarros.pega_instancia()
     fabrica.gera_relatorio()
 
