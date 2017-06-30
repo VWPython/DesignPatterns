@@ -1,4 +1,4 @@
-from carro.fabricas.fabricaDeCarros import FabricaDeCarros
+from carro.fabricas.fabrica_de_carros import FabricaDeCarros
 from carro.modelos.sedan import FiestaSedan, KaSedan
 from carro.modelos.popular import Fiesta, Ka
 

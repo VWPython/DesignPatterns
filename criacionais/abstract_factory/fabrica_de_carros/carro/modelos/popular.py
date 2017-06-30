@@ -1,4 +1,4 @@
-from carro.categorias.carroPopular import CarroPopular
+from carro.categorias.carro_popular import CarroPopular
 
 
 class Palio(CarroPopular):
