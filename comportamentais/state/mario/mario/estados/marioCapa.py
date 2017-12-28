@@ -1,19 +1,27 @@
-from mario.marioState import MarioState
+from mario.marioState import MarioState, Estado
+
 
 class MarioCapa(MarioState):
+    """
+    Pega a pena e faz o mario voar
+    """
 
     def pega_cogumelo(self):
         print("Mario ganhou 1000 pontos")
-        return MarioGrande()
+        mario = Estado('MarioGrande')
+        return mario.pega_estado()
 
     def pega_flor(self):
         print("Mario com poderes de fogo")
-        return MarioFogo()
+        mario = Estado('MarioFogo')
+        return mario.pega_estado()
 
     def pega_pena(self):
         print("Mario ganhou 1000 pontos")
-        return MarioCapa()
+        mario = Estado('MarioCapa')
+        return mario.pega_estado()
 
     def leva_dano(self):
         print("Mario foi morto")
-        return MarioMorto()
+        mario = Estado('MarioMorto')
+        return mario.pega_estado()
