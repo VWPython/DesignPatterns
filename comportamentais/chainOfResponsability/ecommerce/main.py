@@ -1,23 +1,18 @@
-from ecommerce.bancos.bancoA import BancoA
-from ecommerce.bancos.bancoB import BancoB
-from ecommerce.bancos.bancoC import BancoC
-from ecommerce.bancos.bancoD import BancoD
-from ecommerce.idBancos import IDBancos
+from calculador import Calculador
+from carrinho import Carrinho
+from item import Item
 
-def main():
+compra = Carrinho()
+compra.adiciona_item(Item('item01', 100))
+compra.adiciona_item(Item('item02', 100))
+compra.adiciona_item(Item('item03', 100))
+compra.adiciona_item(Item('item04', 100))
+compra.adiciona_item(Item('item05', 100))
 
-    lista_de_bancos = BancoA()
-    lista_de_bancos.modifica_proximo(BancoB())
-    lista_de_bancos.modifica_proximo(BancoC())
-    lista_de_bancos.modifica_proximo(BancoD())
+print(compra.valor_total)
 
-    try:
-        lista_de_bancos.efetua_pagamento(IDBancos.bancoC)
-        lista_de_bancos.efetua_pagamento(IDBancos.bancoD)
-        lista_de_bancos.efetua_pagamento(IDBancos.bancoA)
-        lista_de_bancos.efetua_pagamento(IDBancos.bancoB)
-    except NameError:
-        raise
+calculador = Calculador()
 
-if __name__ == '__main__':
-    main()
+desconto = calculador.calcula(compra)
+
+print('Desconto:', desconto)
