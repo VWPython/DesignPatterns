@@ -1,6 +1,10 @@
-from romanos.numeroRomanoInterpreter import NumeroRomanoInterpreter
+from romanos.gramatica import GramaticaDeNumerosRomanos
 
-class QuatroDigitosRomanos(NumeroRomanoInterpreter):
+
+class QuatroDigitosRomanos(GramaticaDeNumerosRomanos):
+    """
+    Gramática de números romanos de quatro digitos.
+    """
 
     def um(self):
         return "M"

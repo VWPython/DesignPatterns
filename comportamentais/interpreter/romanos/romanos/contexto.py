@@ -1,19 +1,44 @@
 class Contexto(object):
+    """
+    Número romano.
+    """
 
-    output = 0
-    input = ''
+    def __init__(self, numero=''):
+        """
+        Controi o número romano.
+        """
 
-    def __init__(self, contexto_input):
-        self.input = contexto_input
+        self.__numero_romano = numero
+        self.__resultado = 0
 
-    def pega_input(self):
-        return self.input
+    @property
+    def numero_romano(self):
+        """
+        Retorna o número romano
+        """
 
-    def modifica_input(self, contexto_input):
-        self.input = contexto_input
+        return self.__numero_romano
 
-    def pega_output(self):
-        return self.output
+    @numero_romano.setter
+    def numero_romano(self, numero):
+        """
+        Modifica o número romano.
+        """
 
-    def modifica_output(self, contexto_output):
-        self.output = contexto_output
+        self.__numero_romano = numero
+
+    @property
+    def resultado(self):
+        """
+        Retorna o resultado em decimal ou romano
+        """
+
+        return self.__resultado
+
+    @resultado.setter
+    def resultado(self, resultado):
+        """
+        Modifica o resultado em romano
+        """
+
+        self.__resultado = resultado

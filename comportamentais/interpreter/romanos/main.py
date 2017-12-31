@@ -1,23 +1,26 @@
-from romanos.gramatica.quatroDigitosRomanos import QuatroDigitosRomanos
-from romanos.gramatica.tresDigitosRomanos import TresDigitosRomanos
-from romanos.gramatica.doisDigitosRomanos import DoisDigitosRomanos
-from romanos.gramatica.umDigitoRomano import UmDigitoRomano
+from romanos.gramaticas import (
+    QuatroDigitosRomanos, TresDigitosRomanos,
+    DoisDigitosRomanos, UmDigitoRomano
+)
 from romanos.contexto import Contexto
+from romanos.interpretador import Interpretador
+
 
 def main():
-    interpretadores = []
-    interpretadores.append(QuatroDigitosRomanos)
-    interpretadores.append(TresDigitosRomanos)
-    interpretadores.append(DoisDigitosRomanos)
-    interpretadores.append(UmDigitoRomano)
 
     numero_romano = "CXCIV"
     contexto = Contexto(numero_romano)
 
-    for interpreter in interpretadores:
-        interpreter.interpretar(contexto)
+    interpretador = Interpretador()
+    interpretador.adicionar_gramatica(QuatroDigitosRomanos())
+    interpretador.adicionar_gramatica(TresDigitosRomanos())
+    interpretador.adicionar_gramatica(DoisDigitosRomanos())
+    interpretador.adicionar_gramatica(UmDigitoRomano())
 
-    print(numero_romano + " = " + str(contexto.pega_output()))
+    interpretador.interpretar(contexto)
+
+    print(numero_romano + " = " + str(contexto.resultado))
+
 
 if __name__ == '__main__':
     main()
