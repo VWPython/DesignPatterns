@@ -1,17 +1,38 @@
-from editor.textoCareTaker import TextoCareTaker
-from editor.textoMemento import TextoMemento
+from editor.historico import Historico
+from editor.estado import Estado
+
 
 class Texto(object):
+    """
+    Texto que será escrito.
+    """
 
     def __init__(self):
-        self.caretaker = TextoCareTaker()
+        """
+        Construtor do texto.
+        """
+
+        self.historico = Historico()
         self.texto = ''
 
     def escreve_texto(self, texto):
-        self.caretaker.adiciona_memento(TextoMemento(texto))
+        """
+        Escrever um texto.
+        """
+
+        self.historico.adiciona_estado(Estado(texto))
 
     def desfaze_escrita(self):
-        self.texto = self.caretaker.pega_ultimo_estado_salvo().pega_texto_salvo()
+        """
+        Desfazer a escrita do texto.
+        """
+
+        self.estado = self.historico.obtem_ultimo_estado()
+        self.texto = self.estado.texto
 
     def mostra_texto(self):
+        """
+        Mostrar texto
+        """
+
         print(self.texto)
