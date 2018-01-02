@@ -1,15 +1,36 @@
 class Compra(object):
+    """
+    Compra do cliente.
+    """
 
-    __contador_id = 0
+    ID = 0
 
     def __init__(self, nome_da_loja):
+        """
+        Cria a compra do cliente.
+        """
+
         self.nome_da_loja = nome_da_loja
-        self.__contador_id += 1
-        self.id_nota_fiscal = self.__contador_id
+        Compra.ID += 1
+        self.id_nota_fiscal = Compra.ID
 
     def modifica_valor(self, valor):
+        """
+        Modifica o valor da compra.
+        """
+
         self.valor_total = valor
 
-    def pega_informacao_da_nota_fiscal(self):
-        informacao = "Nota fiscal n°: " + str(self.id_nota_fiscal) + "\nLoja: " + self.nome_da_loja + "\nValor: " + str(self.valor_total) + "\n"
+    @property
+    def nota_fiscal(self):
+        """
+        Pega informações da nota fiscal.
+        """
+
+        informacao = "Nota fiscal n° {0}\nLoja: {1}\nValor: {2}\n".format(
+            str(self.id_nota_fiscal),
+            self.nome_da_loja,
+            str(self.valor_total)
+        )
+
         return informacao

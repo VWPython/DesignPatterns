@@ -1,6 +1,15 @@
 from loja.pagamentoCommand import PagamentoCommand
 
-class PagamentoCartaoDeCredito(PagamentoCommand):
+
+class CartaoDeCredito(PagamentoCommand):
+    """
+    Pagamento com cartão de crédito.
+    """
 
     def processa_compra(self, compra):
-        print("Cartão de credito aceito!\n" + compra.pega_informacao_da_nota_fiscal())
+        """
+        Processa a compra utilizando cartão de crédito como forma de
+        pagemento.
+        """
+
+        print("Cartão de credito aceito!\n" + compra.nota_fiscal)

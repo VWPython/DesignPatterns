@@ -1,6 +1,14 @@
 from loja.pagamentoCommand import PagamentoCommand
 
-class PagamentoBoleto(PagamentoCommand):
+
+class Boleto(PagamentoCommand):
+    """
+    Pagamento com boleto bancario.
+    """
 
     def processa_compra(self, compra):
-        print("Boleto criado!\n" + compra.pega_informacao_da_nota_fiscal())
+        """
+        Processa a compra com boleto bancario como forma de pagamento
+        """
+
+        print("Boleto criado!\n" + compra.nota_fiscal)

@@ -1,0 +1,3 @@
+from loja.pagamentos.pagamentoBoleto import Boleto
+from loja.pagamentos.pagamentoCartaoDeCredito import CartaoDeCredito
+from loja.pagamentos.pagamentoCartaoDeDebito import CartaoDeDebito
