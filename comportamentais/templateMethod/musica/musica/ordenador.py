@@ -1,12 +1,24 @@
 from abc import ABC, abstractmethod
 
-class OrdenadorTemplate(ABC):
+
+class Ordenador(ABC):
+    """
+    Classe abstrata responsavel por ordenar as músicas.
+    """
 
     @abstractmethod
-    def is_primeiro(self, musica1, musica2):
+    def vem_antes(self, musica1, musica2):
+        """
+        Verifica qual a musica que vem antes.
+        """
+
         pass
 
     def ordenar_musica(self, lista):
+        """
+        Ordena as músicas
+        """
+
         nova_lista = []
 
         for musicaMP3 in lista:
@@ -14,7 +26,7 @@ class OrdenadorTemplate(ABC):
 
         for i in range(len(nova_lista)):
             for j in range(i, len(nova_lista)):
-                if (not self.is_primeiro(nova_lista[i], nova_lista[j])):
+                if (not self.vem_antes(nova_lista[i], nova_lista[j])):
                     temporaria = nova_lista.index(nova_lista[j])
                     nova_lista[j] = nova_lista[i]
                     nova_lista[i] = nova_lista[temporaria]

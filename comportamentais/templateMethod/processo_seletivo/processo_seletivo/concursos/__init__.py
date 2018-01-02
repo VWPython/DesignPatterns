@@ -1,0 +1,2 @@
+from processo_seletivo.concursos.aeronautica import Aeronautica
+from processo_seletivo.concursos.marinha import Marinha
