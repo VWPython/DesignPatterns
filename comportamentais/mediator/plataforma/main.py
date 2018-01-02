@@ -1,19 +1,23 @@
-from plataforma.mensagemMediator import MensagemMediator
-from plataforma.colleagues.iosColleague import IOSColleague
-from plataforma.colleagues.androidColleague import AndroidColleague
+from plataforma import MensagemMediator
+from plataforma.plataformas import IOS, Android
+
 
 def main():
+    """
+    Função principal
+    """
 
     mediator = MensagemMediator()
 
-    android = AndroidColleague(mediator)
-    ios = IOSColleague(mediator)
+    android = Android(mediator)
+    ios = IOS(mediator)
 
-    mediator.adiciona_colleague(android)
-    mediator.adiciona_colleague(ios)
+    mediator.adiciona(android)
+    mediator.adiciona(ios)
 
     android.envia_mensagem("Oi, eu sou o android")
-    ios.envia_mensagem("Oi, eu sou o IOS")
+    ios.envia_mensagem("Olá android, eu sou o IOS")
+
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,1 @@
+from plataforma.mensagem import MensagemMediator
