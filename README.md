@@ -281,7 +281,7 @@ Padrões de criação com escopo de classe vão utilizar herança para garantir 
 
 * **Template Method**: Definir a ordem na qual determinados passos devem ser realizados na resolução de um problema e permitir que esses passos possam ser realizados de formas diferentes de acordo com a situação.
 
-* **Visitor**: Permitir atualizações específicas em uma coleção de objetos de acordo com o tipo particular de cada objeto atualizado.
+* **Visitor**: Permitir atualizações específicas em uma coleção de objetos de acordo com o tipo particular de cada objeto atualizado. Normalmente quando temos uma árvore, e precisamos navegar nessa árvore de maneira organizada, podemos usar um Visitor.
 
 * **Mediator**: Quando uma situação em que um relacionamento muitos para muitos é necessário, uma boa prática é criar uma tabela intermediária e deixar que ela relaciona uma entidade com outras várias e vice versa.
 
