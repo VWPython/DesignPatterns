@@ -1,24 +1,60 @@
 class No(object):
+    """
+    Classe responsavel pelos nós da arvore binária de busca.
+    """
 
     def __init__(self, chave):
-        self.chave = chave
-        self.esquerda = None
-        self.direita = None
+        """
+        Cria um nó da arvore.
+        """
 
-    def to_string(self):
-        return str(self.chave)
+        self.__chave = chave
+        self.__esquerda = None
+        self.__direita = None
 
-    def pega_chave(self):
-        return self.chave
+    def __str__(self):
+        """
+        Retorna o nó em forma de string.
+        """
 
-    def pega_no_esquerda(self):
-        return self.esquerda
+        return str(self.__chave)
 
-    def modifica_no_esquerda(self, no_esquerdo):
-        self.esquerda = no_esquerdo
+    @property
+    def chave(self):
+        """
+        Pega a chave do nó.
+        """
 
-    def pega_no_direita(self):
-        return self.direita
+        return self.__chave
 
-    def modifica_no_direita(self, no_direito):
-        self.direito = no_direito
+    @property
+    def esquerda(self):
+        """
+        Pega o nó a esquerda do nó chave.
+        """
+
+        return self.__esquerda
+
+    @esquerda.setter
+    def esquerda(self, no_esquerdo):
+        """
+        Modifica o nó esquerdo do nó chave.
+        """
+
+        self.__esquerda = no_esquerdo
+
+    @property
+    def direita(self):
+        """
+        Pega o nó a direita do nó chave.
+        """
+
+        return self.__direita
+
+    @direita.setter
+    def direita(self, no_direito):
+        """
+        Modifica o nó direito do nó chave.
+        """
+
+        self.__direita = no_direito

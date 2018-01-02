@@ -6,7 +6,6 @@ from operacoes.numero import Numero
 def main():
     """
     Função principal.
-    NÃO TA FUNCIONANDO.
     """
 
     impressao = Impressora()
@@ -17,12 +16,7 @@ def main():
     resultado = Soma(expressao_esquerda, Numero(7))
     dividendo = Multiplicacao(resultado, Numero(2))
 
-    resultado = Divisao(dividendo, Numero(0))
-    resultado.executa()
-
     resultado = Divisao(dividendo, Numero(10))
-
-    resultado.aceita(impressao)
 
     print("{0} = {1}".format(
         resultado.aceita(impressao),

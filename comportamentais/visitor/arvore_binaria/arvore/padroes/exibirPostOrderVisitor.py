@@ -1,10 +1,30 @@
 from arvore.arvoreVisitante import ArvoreVisitante
 
+
 class ExibirPostOrderVisitor(ArvoreVisitante):
+    """
+    Visita os elementos da arvoré de busca pós-ordem
+
+                        A
+                       / \
+                      B   D
+                     /   / \
+                    C   E   F
+    """
 
     def visitar(self, no):
-        if (no == None):
+        """
+        Visitar primeiro a sub-árvore esquerda, depois a sub-árvore direita
+        e por último a raiz.
+
+        Percorre: CBEFDA
+        """
+
+        if (no is None):
             return
-        self.visitar(no.pega_no_esquerda())
-        self.visitar(no.pega_no_direita())
-        print(no.to_string())
+
+        self.visitar(no.esquerda)
+
+        self.visitar(no.direita)
+
+        print(no)

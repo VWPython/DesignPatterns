@@ -1,10 +1,30 @@
 from arvore.arvoreVisitante import ArvoreVisitante
 
+
 class ExibirInOrderVisitor(ArvoreVisitante):
+    """
+    Exibe a arvore binária de busca em-ordem.
+
+                        A
+                       / \
+                      B   D
+                     /   / \
+                    C   E   F
+    """
 
     def visitar(self, no):
-        if (no == None):
+        """
+        Visita primeiro a raiz, depois a sub-árvore esquerda e
+        por último a sub-árvore direita.
+
+        Percorre: CBAEDF
+        """
+
+        if (no is None):
             return
-        self.visitar(no.pega_no_esquerda())
-        print(no.to_string())
-        self.visitar(no.pega_no_direita())
+
+        self.visitar(no.esquerda)
+
+        print(no)
+
+        self.visitar(no.direita)

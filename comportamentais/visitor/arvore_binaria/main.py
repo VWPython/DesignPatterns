@@ -3,7 +3,12 @@ from arvore.padroes.exibirPostOrderVisitor import ExibirPostOrderVisitor
 from arvore.padroes.exibirPreOrderVisitor import ExibirPreOrderVisitor
 from arvore.arvoreBinaria import ArvoreBinaria
 
+
 def main():
+    """
+    Função principal.
+    """
+
     arvore = ArvoreBinaria(7)
 
     arvore.inserir(15)
@@ -15,10 +20,13 @@ def main():
 
     print("=== Exibindo em ordem ===")
     arvore.aceitar_visitante(ExibirInOrderVisitor())
-    print("\n=== Exibindo pre ordem ===")
+
+    print("\n=== Exibindo pré ordem ===")
     arvore.aceitar_visitante(ExibirPreOrderVisitor())
+
     print("\n=== Exibindo pós ordem ===")
     arvore.aceitar_visitante(ExibirPostOrderVisitor())
+
 
 if __name__ == '__main__':
     main()
