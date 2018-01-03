@@ -1,7 +1,11 @@
-from carro.fabrica_de_carros import FabricaDeCarros
+from carro import FabricaDeCarros
 
 
 def main():
+    """
+    Função principal.
+    """
+
     fabrica = FabricaDeCarros.pega_instancia()
     fabrica.cria_carro_fiat()
     fabrica.cria_carro_ford()
@@ -11,6 +15,7 @@ def main():
     print("Segunda instancia")
     fabrica = FabricaDeCarros.pega_instancia()
     fabrica.gera_relatorio()
+
 
 if __name__ == '__main__':
     main()

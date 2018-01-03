@@ -1,0 +1,1 @@
+from carro.prototipos.palio_prototipo import PalioPrototipo

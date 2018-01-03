@@ -1,7 +1,11 @@
+from empresa import Item, NotaFiscal, CriadorDeNotaFiscal
+
+
 def main():
-    from empresa.criador_de_nota_fiscal import CriadorDeNotaFiscal
-    from empresa.nota_fiscal import NotaFiscal
-    from empresa.item import Item
+    """
+    Função principal.
+    """
+
 
     itens = [
         Item('Item A', 100),
@@ -25,6 +29,7 @@ def main():
     )
 
     print('Nota fiscal com builder:', nota_fiscal.razao_social)
+
 
 if __name__ == '__main__':
     main()

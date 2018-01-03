@@ -1,6 +1,6 @@
-from descontos.cinco_itens import DescontoCincoItens
-from descontos.quinhentos_reais import DescontoQuinhentosReais
-from descontos.sem_desconto import SemDesconto
+from ecommerce.descontos import (
+    DescontoCincoItens, DescontoQuinhentosReais, SemDesconto
+)
 
 
 class Calculador(object):

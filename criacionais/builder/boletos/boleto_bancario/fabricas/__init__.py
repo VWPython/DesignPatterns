@@ -1,0 +1,1 @@
+from boleto_bancario.fabricas.fabrica_de_bbboleto import FabricaDeBBBoleto

@@ -3,6 +3,9 @@ from carro.modelos.chevrolet import Celta, Prisma, Onix
 
 
 class Chevrolet(FabricaDeCarros):
+    """
+    Fabrica de carros da Chevrolet.
+    """
 
     ONIX = 0
     CELTA = 1

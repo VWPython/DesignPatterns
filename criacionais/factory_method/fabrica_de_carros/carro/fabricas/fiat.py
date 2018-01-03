@@ -3,6 +3,9 @@ from carro.modelos.fiat import Palio, Uno, Punto
 
 
 class Fiat(FabricaDeCarros):
+    """
+    Fabrica de carros da Fiat.
+    """
 
     PALIO = 0
     UNO = 1

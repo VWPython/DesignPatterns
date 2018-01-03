@@ -1,0 +1,3 @@
+from ecommerce.descontos.cinco_itens import DescontoCincoItens
+from ecommerce.descontos.sem_desconto import SemDesconto
+from ecommerce.descontos.quinhentos_reais import DescontoQuinhentosReais

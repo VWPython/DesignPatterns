@@ -3,6 +3,9 @@ from carro.modelos.volkswagen import Gol, CrossFox, Saveiro
 
 
 class Volkswagen(FabricaDeCarros):
+    """
+    Fabrica de carros da Volkswagen
+    """
 
     GOL = 0
     CROSSFOX = 1

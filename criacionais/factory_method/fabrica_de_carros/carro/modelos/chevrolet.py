@@ -2,6 +2,9 @@ from carro.modelos.carro import Carro
 
 
 class Celta(Carro):
+    """
+    Carro celta.
+    """
 
     def mostra_informacao(self):
         print("Modelo: Celta")
@@ -9,6 +12,9 @@ class Celta(Carro):
 
 
 class Onix(Carro):
+    """
+    Carro Onix.
+    """
 
     def mostra_informacao(self):
         print("Modelo: Onix")
@@ -16,6 +22,9 @@ class Onix(Carro):
 
 
 class Prisma(Carro):
+    """
+    Carro prisma
+    """
 
     def mostra_informacao(self):
         print("Modelo: Prisma")

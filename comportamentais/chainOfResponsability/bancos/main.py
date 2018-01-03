@@ -1,11 +1,11 @@
-from banco.bancos.bancoA import BancoA
-from banco.bancos.bancoB import BancoB
-from banco.bancos.bancoC import BancoC
-from banco.bancos.bancoD import BancoD
+from banco.bancos import BancoA, BancoB, BancoC, BancoD
 from banco.idBancos import IDBancos
 
 
 def main():
+    """
+    Função principal
+    """
 
     lista_de_bancos = BancoA()
     lista_de_bancos.insere(BancoB())

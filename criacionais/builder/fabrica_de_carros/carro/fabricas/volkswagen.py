@@ -1,7 +1,10 @@
-from carro.fabrica_de_carros import FabricaDeCarros
+from carro import FabricaDeCarros
 
 
 class Volkswagen(FabricaDeCarros):
+    """
+    Fabrica de carros da Volkswagen
+    """
 
     def define_preco(self, preco):
         self.carro.preco = preco

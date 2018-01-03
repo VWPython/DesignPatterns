@@ -1,9 +1,12 @@
-from carro.concessionaria import Concessionaria
-from carro.fabricas.fiat import Fiat
-from carro.fabricas.volkswagen import Volkswagen
+from carro.fabricas import Fiat, Volkswagen
+from carro import Concessionaria
 
 
 def main():
+    """
+    Função principal.
+    """
+
     concessionaria = Concessionaria(Fiat())
     concessionaria.fabrica_carro(
         preco=18000,
@@ -32,6 +35,7 @@ def main():
     print("Motor:", carro.motor)
     print("Modelo:", carro.modelo)
     print("Montadora:", carro.montadora)
+
 
 if __name__ == '__main__':
     main()

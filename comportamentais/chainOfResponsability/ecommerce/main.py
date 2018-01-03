@@ -1,18 +1,26 @@
-from calculador import Calculador
-from carrinho import Carrinho
-from item import Item
+from ecommerce import (Calculador, Carrinho, Item)
 
-compra = Carrinho()
-compra.adiciona_item(Item('item01', 100))
-compra.adiciona_item(Item('item02', 100))
-compra.adiciona_item(Item('item03', 100))
-compra.adiciona_item(Item('item04', 100))
-compra.adiciona_item(Item('item05', 100))
 
-print(compra.valor_total)
+def main():
+    """
+    Função principal.
+    """
 
-calculador = Calculador()
+    compra = Carrinho()
+    compra.adiciona_item(Item('item01', 100))
+    compra.adiciona_item(Item('item02', 100))
+    compra.adiciona_item(Item('item03', 100))
+    compra.adiciona_item(Item('item04', 100))
+    compra.adiciona_item(Item('item05', 100))
 
-desconto = calculador.calcula(compra)
+    print(compra.valor_total)
 
-print('Desconto:', desconto)
+    calculador = Calculador()
+
+    desconto = calculador.calcula(compra)
+
+    print('Desconto:', desconto)
+
+
+if __name__ == '__main__':
+    main()

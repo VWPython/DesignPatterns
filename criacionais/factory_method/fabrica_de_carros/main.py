@@ -1,10 +1,10 @@
-from carro.fabricas.fiat import Fiat
-from carro.fabricas.volkswagen import Volkswagen
-from carro.fabricas.ford import Ford
-from carro.fabricas.chevrolet import Chevrolet
+from carro.fabricas import Fiat, Volkswagen, Ford, Chevrolet
 
 
 def main():
+    """
+    Função principal
+    """
 
     fabrica = Fiat()
     carro = fabrica.constroi_carro(Fiat.UNO)
@@ -29,6 +29,7 @@ def main():
     carro.mostra_informacao()
     carro = fabrica.constroi_carro(Chevrolet.CELTA)
     carro.mostra_informacao()
+
 
 if __name__ == "__main__":
     main()

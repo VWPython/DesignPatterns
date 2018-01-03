@@ -1,8 +1,12 @@
-from boleto_bancario.fabricas.fabrica_de_bbboleto import FabricaDeBBBoleto
-from boleto_bancario.gerador_de_boleto import GeradorDeBoleto
+from boleto_bancario.fabricas import FabricaDeBBBoleto
+from boleto_bancario import GeradorDeBoleto
 
 
 def main():
+    """
+    Função principal
+    """
+
     fabrica_de_boleto = FabricaDeBBBoleto()
     gerador = GeradorDeBoleto(fabrica_de_boleto)
     boleto = gerador.gera_boleto(
@@ -13,6 +17,7 @@ def main():
         numero=12345675
     )
     boleto.imprime()
+
 
 if __name__ == '__main__':
     main()

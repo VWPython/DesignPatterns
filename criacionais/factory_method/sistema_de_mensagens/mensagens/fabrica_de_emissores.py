@@ -1,15 +1,20 @@
-from mensagens.emissores.sms import SMS
-from mensagens.emissores.jms import JMS
-from mensagens.emissores.email import Email
+from mensagens.emissores import SMS, JMS, Email
 
 
 class FabricaDeEmissores(object):
+    """
+    Fabrica de emissores.
+    """
 
     SMS = 0
     EMAIL = 1
     JMS = 2
 
     def cria_emissor(self, emissor):
+        """
+        Cria o emissor.
+        """
+
         if emissor == self.SMS:
             return SMS()
         elif emissor == self.EMAIL:

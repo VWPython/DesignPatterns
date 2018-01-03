@@ -3,6 +3,9 @@ from carro.modelos.ford import Fiesta, Ka, Ecosport
 
 
 class Ford(FabricaDeCarros):
+    """
+    Fabrica de carros da Ford
+    """
 
     KA = 0
     ECOSPORT = 1
