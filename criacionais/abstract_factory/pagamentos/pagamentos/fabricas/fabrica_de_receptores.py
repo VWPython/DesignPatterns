@@ -1,13 +1,19 @@
-from pagamentos.bandeiras.visa import ReceptorVisa
-from pagamentos.bandeiras.mastercard import ReceptorMasterCard
+from pagamentos.bandeiras import ReceptorVisa, ReceptorMasterCard
 
 
 class FabricaDeReceptores(object):
+    """
+    Fabrica de receptores.
+    """
 
     VISA = 0
     MASTERCARD = 1
 
     def cria(self, receptor):
+        """
+        Cria um receptor.
+        """
+
         if receptor == self.VISA:
             return ReceptorVisa()
         elif receptor == self.MASTERCARD:

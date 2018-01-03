@@ -1,0 +1,2 @@
+from pagamentos.fabricas.fabrica_de_emissores import FabricaDeEmissores
+from pagamentos.fabricas.fabrica_de_receptores import FabricaDeReceptores

@@ -290,3 +290,9 @@ Padrões de criação com escopo de classe vão utilizar herança para garantir 
 * **Chain of responsability**: Usado para acabar com estruturas de decisão, evitando o acoplamento utilizando uma cadeia de solicitações até que uma trate
 
 * **Interpreter**: Reconhecer padrões é um problema bem complicado, no entanto, quando conseguimos formular uma gramática para o problema a solução fica bem mais fácil. Uma vez definida a grámatica e suas regras, é possível utilizar o padrão Interpreter para montar uma estrutura para interpretar os comandos.
+
+***
+### 6. Arrumar
+***
+
+* Template Method app musicas - Ordenação de autor e nome não está funcionando

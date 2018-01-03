@@ -1,7 +1,13 @@
-from pagamentos.fabricas.fabrica_de_comunicadores import FabricaDeComunicadoresVisa, FabricaDeComunicadoresMasterCard
+from pagamentos.fabricas.fabrica_de_comunicadores import (
+    FabricaDeComunicadoresVisa, FabricaDeComunicadoresMasterCard
+)
 
 
 def main():
+    """
+    Função principal
+    """
+
     comunicador = FabricaDeComunicadoresVisa()
 
     transacao = "Valor=550; Senha=123"
@@ -21,6 +27,7 @@ def main():
     receptor = comunicador.cria_receptor()
     mensagem = receptor.recebe()
     print(mensagem)
+
 
 if __name__ == '__main__':
     main()
