@@ -4,7 +4,13 @@ from pedidos import Pedido, FilaDeTrabalho
 
 def main():
     """
-    Função principal.
+    Controlar as chamadas a um determinado componente, modelando cada
+    requisição como um objeto. Permitir que as operações possam ser
+    desfeitas, enfileiradas ou registradas através de comandos.
+
+    A ideia do Command é abstrair um comando que deve ser executado, pois não
+    é possível executá-lo naquele momento (pois precisamos por em uma fila
+    ou coisa do tipo).
     """
 
     pedido1 = Pedido('Flavio', 200)

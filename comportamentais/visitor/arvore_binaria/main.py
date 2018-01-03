@@ -1,12 +1,20 @@
-from arvore.padroes.exibirInOrderVisitor import ExibirInOrderVisitor
-from arvore.padroes.exibirPostOrderVisitor import ExibirPostOrderVisitor
-from arvore.padroes.exibirPreOrderVisitor import ExibirPreOrderVisitor
-from arvore.arvoreBinaria import ArvoreBinaria
+from arvore import ArvoreBinaria
+from arvore.padroes import (
+    ExibirInOrderVisitor, ExibirPostOrderVisitor, ExibirPreOrderVisitor
+)
 
 
 def main():
     """
-    Função principal.
+    Quando temos uma árvore, e precisamos navegar nessa árvore de maneira
+    organizada, podemos usar um Visitor
+
+    Permitir atualizações específicas em uma coleção de objetos de acordo
+    com o tipo particular de cada objeto atualizado.
+
+    Representar uma operação a ser executada nos elementos de uma
+    estrutura de objetos. Visitor permite definir uma nova operação
+    sem mudar as classes dos elementos sobre os quais opera.
     """
 
     arvore = ArvoreBinaria(7)

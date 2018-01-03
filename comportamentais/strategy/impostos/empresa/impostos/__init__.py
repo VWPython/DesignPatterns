@@ -1,0 +1,2 @@
+from empresa.impostos.calculaImpostoQuinzeOuDez import CalculaImpostoQuinzeOuDez
+from empresa.impostos.calculaImpostoVinteOuQuinze import CalculaImpostoVinteOuQuinze

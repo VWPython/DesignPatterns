@@ -1,9 +1,11 @@
-from editor.texto import Texto
+from editor import Texto
 
 
 def main():
     """
-    Função principal
+    Sem violar o encapsulamento, capturar e externalizar um estado interno
+    de um objeto, de maneira que o objeto possa ser restaurado para esse
+    estado mais tarde.
     """
 
     texto = Texto()

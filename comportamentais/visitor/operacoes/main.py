@@ -1,11 +1,18 @@
 from operacoes.simples import Soma, Subtracao, Multiplicacao, Divisao
-from operacoes.impressao import Impressora
-from operacoes.numero import Numero
+from operacores import Impressora, Numero
 
 
 def main():
     """
-    Função principal.
+    Quando temos uma árvore, e precisamos navegar nessa árvore de maneira
+    organizada, podemos usar um Visitor
+
+    Permitir atualizações específicas em uma coleção de objetos de acordo
+    com o tipo particular de cada objeto atualizado.
+
+    Representar uma operação a ser executada nos elementos de uma
+    estrutura de objetos. Visitor permite definir uma nova operação
+    sem mudar as classes dos elementos sobre os quais opera.
     """
 
     impressao = Impressora()

@@ -3,7 +3,8 @@ from temas import Tema
 
 def main():
     """
-    Função principal
+    Permitir a criação de uma quantidade limitada de instâncias de
+    determinada classe e fornecer um modo para recuperá-las.
     """
 
     tema_fire1 = Tema.pega_instancia(Tema.FIRE)

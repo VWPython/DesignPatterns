@@ -3,7 +3,8 @@ from configuracoes import Configuracao
 
 def main():
     """
-    Função principal.
+    Permitir a criação de uma única instância de uma classe e fornecer um
+    modo para recuperá-la.
     """
 
     configuracao = Configuracao.pega_instancia()

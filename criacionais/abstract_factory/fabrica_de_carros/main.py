@@ -3,7 +3,11 @@ from carro.fabricas import Fiat, Ford
 
 def main():
     """
-    Função principal
+    Fornecer uma interface para criação de famílias de objetos relacionados
+    ou dependentes sem especificar suas classes concretas
+
+    Encapsula a escolha da classe concreta a ser utilizada na criação de
+    objetos de diversas familias.
     """
 
     fabrica = Fiat()

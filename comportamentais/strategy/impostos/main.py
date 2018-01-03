@@ -1,9 +1,14 @@
-from empresa.funcionario import Funcionario
+from empresa import Funcionario
 
 
 def main():
     """
-    Função principal
+    O padrão Strategy é muito útil quando temos um conjunto de algoritmos
+    similares, e precisamos alternar entre eles em diferentes pedaços da
+    aplicação.
+
+    A ideia fundamental desse padrão é possibilitar facilmente a variação
+    do algoritmo a ser utilizado na resolução de um problema
     """
 
     funcionario1 = Funcionario(Funcionario.DESENVOLVEDOR, 2100)

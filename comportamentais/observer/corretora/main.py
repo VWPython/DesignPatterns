@@ -4,7 +4,10 @@ from corretora.corretoras import HomeBroker, XP
 
 def main():
     """
-    Função principal
+    Atribui aos objetos que tem seus estados alterados a tarefa de notificar
+    os objetos interessados nessas mudanças, por exemplo, Na bolsa de valores
+    as ações estão em constante mudança e as corretoras e bancos sempre querem
+    ficar observando as alterações nessas ações.
     """
 
     acao = Acao("Vale3", 45.27)

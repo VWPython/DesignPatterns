@@ -1,11 +1,16 @@
-from musica.playlist import Playlist
-from musica.modo_de_reproducao import ModoDeReproducao
+from musica import Playlist, ModoDeReproducao
 
 
 def main():
     """
-    Função principal
     BUG: Lógica de ordenação por nome e autor está falhando.
+
+    Quanto temos diferentes algoritmos que possuem estruturas parecidas.
+
+    Ele tem uma estrutura parecida com às linhas de montagem de carro,
+    pois permite definir a ordem de execução dos passos que resolvem um
+    determinado problema e permite que cada passo possa ser implementado
+    de maneiras diferentes.
     """
 
     playlist = Playlist()

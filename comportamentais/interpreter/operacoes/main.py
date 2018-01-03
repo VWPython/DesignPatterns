@@ -4,7 +4,16 @@ from operacoes.numero import Numero
 
 def main():
     """
-    Função principal.
+    Reconhecer padrões é um problema bem complicado, no entanto, quando
+    conseguimos formular uma gramática para o problema a solução fica
+    bem mais fácil.
+
+    Uma vez definida a grámatica e suas regras, é possível utilizar o
+    padrão Interpreter para montar uma estrutura para interpretar os comandos.
+
+    Dada uma linguagem, definir uma representação para sua gramática
+    juntamente com um interpretador que usa a representação para interpretar
+    sentenças dessa linguagem.
     """
 
     expressao_esquerda = Soma(Numero(10), Numero(20))

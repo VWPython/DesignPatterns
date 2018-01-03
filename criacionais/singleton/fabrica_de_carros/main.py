@@ -3,7 +3,8 @@ from carro import FabricaDeCarros
 
 def main():
     """
-    Função principal.
+    Permitir a criação de uma única instância de uma classe e fornecer um
+    modo para recuperá-la.
     """
 
     fabrica = FabricaDeCarros.pega_instancia()

@@ -1,0 +1,3 @@
+from arvore.padroes.exibirInOrderVisitor import ExibirInOrderVisitor
+from arvore.padroes.exibirPostOrderVisitor import ExibirPostOrderVisitor
+from arvore.padroes.exibirPreOrderVisitor import ExibirPreOrderVisitor

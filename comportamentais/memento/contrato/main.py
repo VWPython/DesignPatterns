@@ -1,11 +1,12 @@
-from contratos.historico import Historico
-from contratos.contrato import Contrato
+from contratos import Historico, Contrato
 from datetime import date
 
 
 def main():
     """
-    Função principal
+    Sem violar o encapsulamento, capturar e externalizar um estado interno
+    de um objeto, de maneira que o objeto possa ser restaurado para esse
+    estado mais tarde.
     """
 
     historico = Historico()

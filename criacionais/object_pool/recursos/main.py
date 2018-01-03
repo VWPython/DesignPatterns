@@ -3,7 +3,12 @@ from recursos.objetos.mesa import MesaCompartilhada
 
 def main():
     """
-    Função principal.
+    Possibilita o reaproveitamento de objetos
+
+    Uma situação típica em que recursos limitados devem ser reutilizados
+    é o do restaurante. O restaurante não adquire novas mesas a medida
+    que clientes chegam ao restaurante e as mesas são reutilizadas por
+    novos clientes assim que são liberadas.
     """
 
     mesa_compartilhada = MesaCompartilhada()

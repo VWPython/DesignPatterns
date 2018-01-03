@@ -1,12 +1,13 @@
-from dados.observadores.tabela import Tabela
-from dados.observadores.porcento import Porcento
-from dados.subject import Subject
-from dados.dados import Dados
+from dados import Subject, Dados
+from dados.observadores import Tabela, Porcento
 
 
 def main():
     """
-    Função principal
+    Atribui aos objetos que tem seus estados alterados a tarefa de notificar
+    os objetos interessados nessas mudanças, por exemplo, Na bolsa de valores
+    as ações estão em constante mudança e as corretoras e bancos sempre querem
+    ficar observando as alterações nessas ações.
     """
 
     dados = Subject()

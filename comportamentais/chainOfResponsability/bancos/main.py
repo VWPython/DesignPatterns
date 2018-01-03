@@ -4,7 +4,13 @@ from banco.idBancos import IDBancos
 
 def main():
     """
-    Função principal
+    Usado para acabar com estruturas de decisão, evitando o acoplamento
+    utilizando uma cadeia de solicitações até que uma trate
+
+    Evitar o acoplamento do remetente de uma solicitação ao seu receptor,
+    ao dar a mais de um objeto a oportunidade de tratar a solicitação.
+    Encadear os objetos receptores, passando a solicitação ao longo da
+    cadeia até que um objeto a trate.
     """
 
     lista_de_bancos = BancoA()

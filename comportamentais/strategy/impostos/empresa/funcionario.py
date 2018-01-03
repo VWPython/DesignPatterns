@@ -1,5 +1,4 @@
-from empresa.impostos.calculaImpostoQuinzeOuDez import CalculaImpostoQuinzeOuDez
-from empresa.impostos.calculaImpostoVinteOuQuinze import CalculaImpostoVinteOuQuinze
+from empresa.impostos import CalculaImpostoQuinzeOuDez, CalculaImpostoVinteOuQuinze
 
 
 class Funcionario(object):

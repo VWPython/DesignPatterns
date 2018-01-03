@@ -3,7 +3,8 @@ from campanhas.campanha import Campanha
 
 def main():
     """
-    Função principal
+    Possibilitar a criação de novos objetos a partir da cópia de
+    objetos existentes.
     """
 
     nome = "K19"

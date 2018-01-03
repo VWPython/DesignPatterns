@@ -7,6 +7,18 @@ from romanos.interpretador import Interpretador
 
 
 def main():
+    """
+    Reconhecer padrões é um problema bem complicado, no entanto, quando
+    conseguimos formular uma gramática para o problema a solução fica
+    bem mais fácil.
+
+    Uma vez definida a grámatica e suas regras, é possível utilizar o
+    padrão Interpreter para montar uma estrutura para interpretar os comandos.
+
+    Dada uma linguagem, definir uma representação para sua gramática
+    juntamente com um interpretador que usa a representação para interpretar
+    sentenças dessa linguagem.
+    """
 
     numero_romano = "CXCIV"
     contexto = Contexto(numero_romano)

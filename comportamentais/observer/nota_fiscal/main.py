@@ -1,13 +1,13 @@
-from compras.item import Item
-from compras.nota_fiscal import NotaFiscal
-from compras.observadores.envia import envia_por_email
-from compras.observadores.imprime import imprime
-from compras.observadores.salva import salva_no_banco
+from compras.observadores import envia_por_email, imprime, salva_no_banco
+from compras import Item, NotaFiscal
 
 
 def main():
     """
-    Função principal.
+    Atribui aos objetos que tem seus estados alterados a tarefa de notificar
+    os objetos interessados nessas mudanças, por exemplo, Na bolsa de valores
+    as ações estão em constante mudança e as corretoras e bancos sempre querem
+    ficar observando as alterações nessas ações.
     """
 
     itens = [
