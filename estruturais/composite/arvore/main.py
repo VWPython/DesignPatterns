@@ -1,35 +1,33 @@
-from arvore.arquivoComponent import ArquivoComponent
-from arvore.arquivoComposite import ArquivoComposite
-from arvore.arquivos.arquivoVideo import ArquivoVideo
+from arvore import ArquivoComposite
+from arvore.arquivos import ArquivoVideo
+
 
 def main():
-    minha_pasta = ArquivoComposite("Minha pasta")
-    meu_video = ArquivoVideo("meu video.avi")
-    meu_outro_video = ArquivoVideo("serieS01E01.mkv")
+    """
+    Agrupa objetos que fazem parte de uma relação parte-todo de forma a
+    tratá-los sem distinção
+    """
 
-    try:
-        print("Inserindo arquivos")
-        minha_pasta.adiciona(meu_video)
-        minha_pasta.adiciona(meu_outro_video)
-        minha_pasta.imprime_nome_do_arquivo()
-    except NameError:
-        raise
+    pasta = ArquivoComposite("Minha pasta")
+    video1 = ArquivoVideo("meu video.avi")
+    video2 = ArquivoVideo("serieS01E01.mkv")
 
-    try:
-        print("\nPesquisando arquivos:")
-        arquivo = minha_pasta.pega_arquivo(meu_video.pega_nome_do_arquivo())
-        arquivo.imprime_nome_do_arquivo()
-        print("\nRemovendo arquivos:")
-        minha_pasta.remove(meu_video.pega_nome_do_arquivo())
-        minha_pasta.imprime_nome_do_arquivo()
-    except NameError:
-        raise
+    print("***** Inserindo arquivos *****")
+    pasta.adiciona(video1)
+    pasta.adiciona(video2)
+    pasta.mostra()
 
-    try:
-        print("\nCausando um exception")
-        meu_video.adiciona(meu_outro_video)
-    except NameError:
-        raise
+    print("\n***** Pesquisando arquivos *****")
+    arquivo = pasta.pega(video1.titulo)
+    arquivo.mostra()
+
+    print("\n****** Removendo arquivos *****")
+    pasta.remove(video1.titulo)
+    pasta.mostra()
+
+    print("\n****** Causando um exception *****")
+    video1.adiciona(video2)
+
 
 if __name__ == "__main__":
     main()

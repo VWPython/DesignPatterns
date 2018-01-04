@@ -1,7 +1,10 @@
-from bar.coquetelDecorator import CoquetelDecorator
+from bar.coquetel_decorator import CoquetelDecorator
 
 
 class Acuca(CoquetelDecorator):
+    """
+    Adicional açucar
+    """
 
     def __init__(self, coquetel):
         """

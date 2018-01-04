@@ -1,0 +1,1 @@
+from controle_de_ponto.antigo.controle_de_ponto import ControleDePonto

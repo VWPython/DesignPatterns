@@ -1,24 +1,32 @@
-from janela.abstrata.janelaDialogo import JanelaDialogo
-from janela.abstrata.janelaAviso import JanelaAviso
-from janela.concreta.janelaWindows import JanelaWindows
-from janela.concreta.janelaMac import JanelaMac
-from janela.concreta.janelaLinux import JanelaLinux
+from janela.concreta import JanelaMac, JanelaLinux, JanelaWindows
+from janela.abstrata import JanelaDialogo, JanelaAviso
+
 
 def main():
-    janela = JanelaDialogo(JanelaLinux());
-    janela.desenhar();
+    """
+    Separar uma abstração de sua representação, de forma que ambos possam
+    variar e produzir tipos de objetos diferentes.
+
+    Por exemplo, a possibilidade de combinar os cartões SIM e os
+    aparelhos celulares de forma independente é a característica principal
+    proposta pelo padrão Bridge.
+    """
+
+    janela = JanelaDialogo(JanelaLinux())
+    janela.desenhar()
     print()
 
-    janela = JanelaAviso(JanelaLinux());
-    janela.desenhar();
+    janela = JanelaAviso(JanelaLinux())
+    janela.desenhar()
     print()
 
-    janela = JanelaDialogo(JanelaWindows());
-    janela.desenhar();
+    janela = JanelaDialogo(JanelaWindows())
+    janela.desenhar()
     print()
 
-    janela = JanelaAviso(JanelaMac());
-    janela.desenhar();
+    janela = JanelaAviso(JanelaMac())
+    janela.desenhar()
+
 
 if __name__ == '__main__':
     main()

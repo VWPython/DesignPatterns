@@ -6,7 +6,7 @@ from imposto.orcamento import Orcamento
 
 def main():
     """
-    Função principal.
+    Adiciona funcionalidade a um objeto dinamicamente.
     """
 
     calculador = CalculadorDeImpostos()
